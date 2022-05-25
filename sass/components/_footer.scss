@@ -1,0 +1,144 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $secondary-bg-color;
+}
+
+.footer-flex {
+  display: flex;
+  align-items: baseline;
+}
+
+.logo.footer {
+  color: $additional-text-color;
+}
+
+.page-address {
+  margin-top: 20px;
+
+  font-style: normal;
+}
+
+.footer-address {
+  margin-bottom: 9px;
+  line-height: 1.71;
+
+  color: $additional-text-color;
+}
+
+.footer-contacts {
+  line-height: 1.71;
+  text-decoration: none;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: color $transition-time $transition-func;
+
+  &:visited {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &-item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.join {
+  margin-left: 70px;
+
+  &-text {
+    margin-bottom: 20px;
+
+    line-height: 1.14;
+    text-transform: uppercase;
+
+    color: $additional-text-color;
+  }
+
+  &-soc-flex {
+    display: flex;
+  }
+
+  &-link {
+    color: $primary-bg-color;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.email-footer {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+
+  cursor: pointer;
+
+  transition: border-color $transition-time $transition-func;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+
+.footer-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  padding: 10px 29px;
+  margin-left: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 0;
+  border-radius: 4px;
+  background-color: $accent-color;
+  color: $additional-text-color;
+
+  cursor: pointer;
+}
+
+.icon-send {
+  margin-left: 10px;
+}
+
+.subscribe {
+  margin-left: 93px;
+
+  &-form {
+    display: flex;
+  }
+}
+
+.soc-item {
+  @extend .soc-list__item;
+}
+
+.social-link {
+  @extend .soc-list__link;
+}
+
+.team-icon {
+  @extend .soc-list__icon;
+}
