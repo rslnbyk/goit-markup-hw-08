@@ -1,0 +1,165 @@
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 15px 48px 40px;
+
+  background-color: $primary-bg-color;
+
+  transform: scale(1);
+  transform-origin: top right;
+
+  transition: visibility $transition-time $transition-func,
+    transform $transition-time $transition-func,
+    opacity $transition-time $transition-func;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  background-color: transparent;
+  border: none;
+
+  transition: color $transition-time $transition-func;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  .menu-close-icon {
+    fill: currentColor;
+  }
+}
+
+.menu-nav-link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+
+  text-decoration: none;
+
+  color: inherit;
+
+  transition: color $transition-time $transition-func;
+
+  &:visited {
+    color: $primary-text-color;
+  }
+
+  &:hover,
+  &:focus,
+  &.current-page {
+    color: $accent-color;
+  }
+}
+
+.menu-nav {
+  margin-bottom: 306px;
+
+  &-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.menu-contacts {
+  margin-bottom: 64px;
+
+  &-item-tel {
+    margin-bottom: 32px;
+  }
+}
+
+.menu-contacts-tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  color: $accent-color;
+
+  &:visited {
+    color: $accent-color;
+  }
+}
+
+.menu-contacts-mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  color: inherit;
+
+  transition: color $transition-time $transition-func;
+
+  &:visited {
+    color: $primary-text-color;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.menu-soc-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-soc-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  color: $accent-color;
+
+  &:visited {
+    color: $accent-color;
+  }
+}
+
+.menu-soc-flex-item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: -10px;
+
+    width: 1px;
+    height: 22px;
+
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+}
+
+.is-closed {
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0);
+  opacity: 0;
+}

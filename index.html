@@ -36,6 +36,11 @@
             </li>
             <li class="nav-item"><a class="nav-link" href="">Контакты</a></li>
           </ul>
+          <button class="menu-button" type="button">
+            <svg class="menu-icon" width="40" height="40">
+              <use href="./images/icons.svg#menu-header"></use>
+            </svg>
+          </button>
         </nav>
         <ul class="list nav-contacts-flex">
           <li class="contacts-item">
@@ -56,13 +61,13 @@
       </div>
     </header>
     <main>
-      <section class="hero">
+      <!-- <section class="hero">
         <h1 class="hero-headline">Эффективные решения для вашего бизнеса</h1>
         <button class="main-btn" type="button" data-modal-open>
           Заказать услугу
         </button>
-      </section>
-      <section class="section details__section">
+      </section> -->
+      <!-- <section class="section details__section">
         <div class="container">
           <ul class="list details-list">
             <li class="details-list__item">
@@ -115,8 +120,8 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="section">
+      </section> -->
+      <!-- <section class="section">
         <div class="container">
           <h2 class="section-headline">Чем мы занимаемся</h2>
           <ul class="list images-flex">
@@ -155,8 +160,8 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="section team">
+      </section> -->
+      <!-- <section class="section team">
         <div class="container">
           <h2 class="team__headline">Наша команда</h2>
           <ul class="list team-cards">
@@ -314,8 +319,8 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="section">
+      </section> -->
+      <!-- <section class="section">
         <div class="container">
           <h2 class="section-headline">Постоянные клиенты</h2>
           <ul class="list clients-flex">
@@ -357,9 +362,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
-    <footer class="page-footer">
+    <!-- <footer class="page-footer">
       <div class="container footer-flex">
         <div>
           <a class="logo footer" href="./index.html"
@@ -429,7 +434,7 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <div class="modal-overlay is-hidden" data-modal>
       <div class="modal-window">
         <button class="modal-close-btn" type="button" data-modal-close>
@@ -488,6 +493,51 @@
         </form>
       </div>
     </div>
+    <div class="mobile-menu is-closed">
+      <button class="menu-close-button" type="button">
+        <svg class="menu-close-icon" width="40" height="40">
+          <use href="./images/icons.svg#menu-close"></use>
+        </svg>
+      </button>
+      <ul class="list menu-nav">
+        <li class="menu-nav-item">
+          <a class="menu-nav-link current-page" href="./index.html">Студия</a>
+        </li>
+        <li class="menu-nav-item">
+          <a class="menu-nav-link" href="./portfolio.html">Портфолио</a>
+        </li>
+        <li class="menu-nav-item">
+          <a class="menu-nav-link" href="">Контакты</a>
+        </li>
+      </ul>
+      <ul class="list menu-contacts">
+        <li class="menu-contacts-item-tel">
+          <a class="menu-contacts-tel" href="tel:+380961111111"
+            >+38 096 111 11 11</a
+          >
+        </li>
+        <li>
+          <a class="menu-contacts-mail" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="list menu-soc-flex">
+        <li class="menu-soc-flex-item">
+          <a class="menu-soc-link" href="">Instagram</a>
+        </li>
+        <li class="menu-soc-flex-item">
+          <a class="menu-soc-link" href="">Twitter</a>
+        </li>
+        <li class="menu-soc-flex-item">
+          <a class="menu-soc-link" href="">Facebook</a>
+        </li>
+        <li class="menu-soc-flex-item">
+          <a class="menu-soc-link" href="">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

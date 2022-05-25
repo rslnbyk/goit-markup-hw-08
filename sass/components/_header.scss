@@ -3,48 +3,87 @@
 }
 
 .header-flex {
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .nav-flex {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  padding-top: 10px;
+  padding-bottom: 9px;
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+    justify-content: flex-start;
+  }
 }
 
 .nav-list-flex {
-  display: flex;
-  margin-left: 93px;
+  display: none;
 
-  .nav-item {
-    margin-right: 50px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 88px;
+
+    .nav-item {
+      margin-right: 50px;
+    }
+
+    .nav-item:last-child {
+      margin-right: 0;
+    }
   }
 
-  .nav-item:last-child {
-    margin-right: 0;
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
   }
 }
 
 .nav-contacts-flex {
-  display: flex;
-  margin-left: auto;
+  display: none;
 
-  .contacts-item:last-child {
-    margin-left: 30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+
+    .contacts-item:last-child {
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: center;
+
+    .contacts-item:last-child {
+      margin-top: 0;
+      margin-left: 30px;
+    }
   }
 }
 
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   text-decoration: none;
 
   color: inherit;
 
   &:visited {
     color: inherit;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
   }
 }
 
@@ -52,74 +91,139 @@
   color: $accent-color;
 }
 
-.nav-link {
-  position: relative;
+.menu-button {
+  height: 40px;
+  padding: 0;
 
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-
-  color: inherit;
+  background-color: transparent;
+  border: none;
 
   transition: color $transition-time $transition-func;
 
-  &.current::after {
-    content: "";
-
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-
-    background-color: $accent-color;
-  }
-
-  &:visited {
-    color: inherit;
-  }
-
-  &:hover,
-  &:focus,
-  &.current {
-    color: $accent-color;
-  }
-}
-
-.header-contacts {
-  display: inline-flex;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-
-  color: $secondary-text-color;
-
-  transition: color $transition-time $transition-func;
-
-  &:visited {
-    color: $secondary-text-color;
-  }
+  cursor: pointer;
 
   &:hover,
   &:focus {
     color: $accent-color;
   }
+
+  .menu-icon {
+    fill: currentColor;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.nav-link {
+  @media screen and (min-width: 768px) {
+    position: relative;
+
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    color: inherit;
+
+    transition: color $transition-time $transition-func;
+
+    &.current::after {
+      content: "";
+
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+
+      background-color: $accent-color;
+    }
+
+    &:visited {
+      color: inherit;
+    }
+
+    &:hover,
+    &:focus,
+    &.current {
+      color: $accent-color;
+    }
+  }
+}
+
+.header-contacts {
+  @media screen and (min-width: 768px) {
+    display: inline-flex;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    color: $secondary-text-color;
+
+    transition: color $transition-time $transition-func;
+
+    &:visited {
+      color: $secondary-text-color;
+    }
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .icon-mail,
 .icon-phone {
-  margin-right: 10px;
-  fill: currentColor;
+  @media screen and (min-width: 768px) {
+    margin-right: 8px;
+    fill: currentColor;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
+}
+
+.icon-mail {
+  @media screen and (min-width: 768px) {
+    width: 14px;
+    height: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.icon-phone {
+  @media screen and (min-width: 768px) {
+    width: 10px;
+    height: 14px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 16px;
+  }
 }
