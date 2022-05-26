@@ -36,6 +36,11 @@
             </li>
             <li class="nav-item"><a class="nav-link" href="">Контакты</a></li>
           </ul>
+          <button class="menu-button" type="button">
+            <svg class="menu-icon" width="40" height="40">
+              <use href="./images/icons.svg#menu-header"></use>
+            </svg>
+          </button>
         </nav>
         <ul class="list nav-contacts-flex">
           <li class="contacts-item">
@@ -312,54 +317,56 @@
     </main>
     <footer class="page-footer">
       <div class="container footer-flex">
-        <div>
-          <a class="logo footer" href="./index.html"
-            ><span class="accent-logo">Web</span>Studio</a
-          >
-          <address class="page-address">
-            <p class="footer-address">г. Киев, пр-т Леси Украинки, 26</p>
-            <ul class="list">
-              <li class="footer-contacts-item">
-                <a class="footer-contacts" href="mailto:info@example.com"
-                  >info@example.com</a
-                >
+        <div class="footer-tablet">
+          <div>
+            <a class="logo footer" href="./index.html"
+              ><span class="accent-logo">Web</span>Studio</a
+            >
+            <address class="page-address">
+              <p class="footer-address">г. Киев, пр-т Леси Украинки, 26</p>
+              <ul class="list">
+                <li class="footer-contacts-item">
+                  <a class="footer-contacts" href="mailto:info@example.com"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="footer-contacts-item">
+                  <a class="footer-contacts" href="tel:+380991111111"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="join">
+            <p class="join-text"><b>присоединяйтесь</b></p>
+            <ul class="list join-soc-flex">
+              <li class="soc-item">
+                <a class="social-link join-link" href=""
+                  ><svg class="team-icon" width="20" height="20">
+                    <use href="./images/icons.svg#instagram"></use></svg
+                ></a>
               </li>
-              <li class="footer-contacts-item">
-                <a class="footer-contacts" href="tel:+380991111111"
-                  >+38 099 111 11 11</a
-                >
+              <li class="soc-item">
+                <a class="social-link join-link" href=""
+                  ><svg class="team-icon" width="20" height="20">
+                    <use href="./images/icons.svg#twitter"></use></svg
+                ></a>
+              </li>
+              <li class="soc-item">
+                <a class="social-link join-link" href=""
+                  ><svg class="team-icon" width="20" height="20">
+                    <use href="./images/icons.svg#facebook"></use></svg
+                ></a>
+              </li>
+              <li class="soc-item">
+                <a class="social-link join-link" href=""
+                  ><svg class="team-icon" width="20" height="20">
+                    <use href="./images/icons.svg#linked"></use></svg
+                ></a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="join">
-          <p class="join-text"><b>присоединяйтесь</b></p>
-          <ul class="list join-soc-flex">
-            <li class="soc-item">
-              <a class="social-link join-link" href=""
-                ><svg class="team-icon" width="20" height="20">
-                  <use href="./images/icons.svg#instagram"></use></svg
-              ></a>
-            </li>
-            <li class="soc-item">
-              <a class="social-link join-link" href=""
-                ><svg class="team-icon" width="20" height="20">
-                  <use href="./images/icons.svg#twitter"></use></svg
-              ></a>
-            </li>
-            <li class="soc-item">
-              <a class="social-link join-link" href=""
-                ><svg class="team-icon" width="20" height="20">
-                  <use href="./images/icons.svg#facebook"></use></svg
-              ></a>
-            </li>
-            <li class="soc-item">
-              <a class="social-link join-link" href=""
-                ><svg class="team-icon" width="20" height="20">
-                  <use href="./images/icons.svg#linked"></use></svg
-              ></a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="subscribe">
           <p class="join-text"><b>Подпишитесь на рассылку</b></p>
@@ -381,5 +388,52 @@
         </div>
       </div>
     </footer>
+    <div class="mobile-menu is-closed">
+      <button class="menu-close-button" type="button">
+        <svg class="menu-close-icon" width="40" height="40">
+          <use href="./images/icons.svg#menu-close"></use>
+        </svg>
+      </button>
+      <ul class="list menu-nav">
+        <li class="menu-nav-item">
+          <a class="menu-nav-link" href="./index.html">Студия</a>
+        </li>
+        <li class="menu-nav-item">
+          <a class="menu-nav-link current-page" href="./portfolio.html"
+            >Портфолио</a
+          >
+        </li>
+        <li class="menu-nav-item">
+          <a class="menu-nav-link" href="">Контакты</a>
+        </li>
+      </ul>
+      <ul class="list menu-contacts">
+        <li class="menu-contacts-item-tel">
+          <a class="menu-contacts-tel" href="tel:+380961111111"
+            >+38 096 111 11 11</a
+          >
+        </li>
+        <li>
+          <a class="menu-contacts-mail" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="list menu-soc-flex">
+        <li class="menu-soc-flex-item">
+          <a class="menu-soc-link" href="">Instagram</a>
+        </li>
+        <li class="menu-soc-flex-item">
+          <a class="menu-soc-link" href="">Twitter</a>
+        </li>
+        <li class="menu-soc-flex-item">
+          <a class="menu-soc-link" href="">Facebook</a>
+        </li>
+        <li class="menu-soc-flex-item">
+          <a class="menu-soc-link" href="">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
