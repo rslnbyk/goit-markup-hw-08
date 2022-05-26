@@ -3,6 +3,9 @@
   top: 0;
   left: 0;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100vw;
   height: 100vh;
   padding: 48px 15px 48px 40px;
@@ -67,7 +70,7 @@
 }
 
 .menu-nav {
-  margin-bottom: 306px;
+  // margin-bottom: 306px;
 
   &-item:not(:last-child) {
     margin-bottom: 32px;

@@ -27,12 +27,41 @@
 
   &-flex {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+
+    @media screen and (min-width: 768px) {
+      flex-wrap: nowrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
   }
 
-  &-item:not(:first-child) {
-    margin-left: 8px;
+  &-item {
+    margin-right: 8px;
+    margin-bottom: 15px;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &-item:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -42,6 +71,12 @@
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .card-item:first-child .card-container {
+    padding: 20px 24px 56px 24px;
+  }
 }
 
 .card-headline {
@@ -59,17 +94,31 @@
   color: $secondary-text-color;
 }
 
-.card-flex {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+@media screen and (min-width: 768px) {
+  .card-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+
+  .card-item {
+    margin-top: 30px;
+    margin-left: 30px;
+    flex-basis: calc((100% - 60px) / 2);
+  }
 }
 
-.card-item {
-  margin-top: 30px;
-  margin-left: 30px;
-  flex-basis: calc((100% - 90px) / 3);
+@media screen and (min-width: 1200px) {
+  .card-item {
+    flex-basis: calc((100% - 90px) / 3);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .card-img-container {
@@ -84,12 +133,20 @@
   height: 100%;
   top: 100%;
   left: 0;
-  padding: 63px 24px;
+  padding: 77px 24px;
 
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(0);
   transition: transform $transition-time $transition-func;
+
+  @media screen and (min-width: 768px) {
+    padding: 49px 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 63px 24px;
+  }
 
   &-text {
     font-size: 18px;
